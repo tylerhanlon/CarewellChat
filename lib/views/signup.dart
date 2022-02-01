@@ -22,15 +22,40 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBarMain(context),
-        body: Container(
+      appBar: appBarMain(context),
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
+              TextField(
+                controller: userNameTextEditingController,
+                decoration: InputDecoration(
+                  hintText: "username",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
+              ),
+
+              TextField(
+                controller: emailTextEditingController,
+                decoration: InputDecoration(
+                  hintText: "email",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
+              ),
+
+              TextField(
+                controller: passwordTextEditingController,
+                decoration: InputDecoration(
+                  hintText: "password",
+                  hintStyle: TextStyle(color: Colors.grey[500]),
+                ),
+              ),
+
               //Make these all have controller: properties
-              textField("username"),
-              textField("email"),
-              textField("password"),
+              //textField("username"),
+              //textField("email"),
+              // textField("password"),
 
               SizedBox(
                 height: 8,
@@ -91,6 +116,8 @@ class _SignUpState extends State<SignUp> {
               )
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

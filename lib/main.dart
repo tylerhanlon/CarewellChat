@@ -1,6 +1,7 @@
 import 'package:chat_application/views/signin.dart';
 import 'package:chat_application/views/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:chat_application/views/chatRoomsScreen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -13,12 +13,14 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     var context2 = context;
     return Scaffold(
-        // appBar: new AppBar(
-        //   backgroundColor: Colors.blue[700],
-        //   title: new Text("Carewell Chat"),
-        // ),
-        appBar: appBarMain(context),
-        body: Container(
+      // appBar: new AppBar(
+      //   backgroundColor: Colors.blue[700],
+      //   title: new Text("Carewell Chat"),
+      // ),
+      appBar: appBarMain(context),
+
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
@@ -83,7 +85,9 @@ class _SignInState extends State<SignIn> {
               )
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 
